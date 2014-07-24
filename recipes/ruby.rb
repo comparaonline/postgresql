@@ -55,7 +55,7 @@ rescue LoadError
   end
 
   begin
-    chef_gem "pg"
+    gem_package "pg"
   rescue Gem::Installer::ExtensionBuildError => e
     # Are we an omnibus install?
     raise if RbConfig.ruby.scan(%r{(chef|opscode)}).empty?
